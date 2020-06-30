@@ -1,9 +1,9 @@
-import { resolve } from 'path';
-import { readFileSync } from 'fs';
-import { compile } from 'solc';
+const path = require('path');
+const fs = require('fs');
+const solc = require('solc');
 
-const inboxPath = resolve(__dirname, "contracts", "Inbox.sol");
-const source = readFileSync(inboxPath, 'utf-8');
+const inboxPath = path.resolve(__dirname, "contracts", "Inbox.sol");
+const source = fs.readFileSync(inboxPath, 'utf-8');
 
 
-export default compile(source, 1).contracts[':Inbox'];
+module.exports =  solc.compile(source, 1).contracts[':Inbox'];
