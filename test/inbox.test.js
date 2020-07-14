@@ -43,3 +43,16 @@ describe('Inbox', () => {
 
   });
 })
+
+// https://rinkeby.infura.io/v3/d981bbe3d90742a3bec0f15cba973e64
+
+// for hdwallet -> 0.0.3
+// const result = await new web3.eth.Contract(JSON.parse(interface))
+//     .deploy({ data: bytecode, arguments: ['Hi there!'] })
+//     .send({ gas: '1000000', from: accounts[0] });
+
+// for hdwallet -> 0.0.4, 0.0.5, 0.0.6
+
+// const result = await new web3.eth.Contract(JSON.parse(interface))
+//      .deploy({data: '0x' + bytecode, arguments: ['Hi there!']}) // add 0x bytecode
+//      .send({from: accounts[0]})
